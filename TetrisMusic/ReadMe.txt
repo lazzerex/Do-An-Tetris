@@ -1,0 +1,1 @@
+ae chuyển folder này vào ổ E để chơi nhạc.
