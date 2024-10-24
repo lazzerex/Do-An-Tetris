@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Threading;
 using System.Diagnostics;
 using System.IO;
@@ -772,22 +772,22 @@ namespace Tetris
 
             string[] tetrisArt = new string[]
             {
-        "TTTTTT EEEEEE TTTTTT  RRRRR   IIII  SSSSS",
-        "  TT   EE       TT    R    R   II   SS    ",
-        "  TT   EEEE     TT    RRRRR    II   SSSSS",
-        "  TT   EE       TT    R  RR    II      SS",
-        "  TT   EEEEEE   TT    R    RR IIII  SSSSS"
+     "###### ###### ######  #####   ####  ##### ",
+     "  ##   ##       ##    ##   ##  ##   ##    ",
+     "  ##   ####     ##    #####    ##   ##### ",
+     "  ##   ##       ##    ##  ##   ##      ## ",
+     "  ##   ######   ##    ##   ## ####  ##### "
             };
 
             int windowWidth = 40;
             int windowHeight = 20;
             int artStartY = 4;
 
-            // Display the TETRIS art
+            // Hiện chữ Tetris trong màn hình chính
 
             ConsoleKeyInfo keyInfo;
 
-            // Check for skip input before starting animations
+            // Kiểm tra xem nếu người dùng có muốn bỏ qua phần mở đầu của game không
             if (Console.KeyAvailable)
             {
                 keyInfo = Console.ReadKey(true);
@@ -797,7 +797,7 @@ namespace Tetris
                 }
             }
 
-            // Tetris art animation
+            // Chạy chữ Tetris
             for (int i = 0; i < tetrisArt.Length; i++)
             {
                 int artWidth = tetrisArt[i].Length;
@@ -812,7 +812,7 @@ namespace Tetris
                 {
                     foreach (char c in tetrisArt[i])
                     {
-                        // Check for skip input during animation
+                        // kiểm tra input nếu người dùng muốn bỏ qua phần mở đầu
                         if (Console.KeyAvailable)
                         {
                             keyInfo = Console.ReadKey(true);
@@ -829,7 +829,7 @@ namespace Tetris
                 }
             }
 
-            // Menu lines animation
+            // Chạy menu 
             string[] menuLines = new string[]
             {
     "+-----------------------+",
@@ -855,7 +855,7 @@ namespace Tetris
                 {
                     foreach (char c in line)
                     {
-                        // Check for skip input during animation
+                        // Kiểm tra input
                         if (Console.KeyAvailable)
                         {
                             keyInfo = Console.ReadKey(true);
